@@ -8,12 +8,6 @@
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
-        {
-            "user": "ignore this",
-            "link": "a.com",
-            "percent": 0,
-            "hz": 962
-        }
     ]
 }
         
