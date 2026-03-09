@@ -1,13 +1,13 @@
 [
     {
-        "role": "owner",
-        "name": "List Owner",
-        "link": "https://www.youtube.com/@Prometheus_Alt"
+        "role": "Owner",
+        "name": "Chipz",
+        "link": "https://www.youtube.com/@NotChipzPlaysYT"
     },
     {
-        "role": "admin",
-        "name": "List Admin",
-        "link": "https://www.youtube.com/@Prometheus_Alt"
+        "role": "Website Owner",
+        "name": "Obey",
+        "link": "https://www.youtube.com/@ObeyMiniNinja"
     },
     {
         "role": "helper",
