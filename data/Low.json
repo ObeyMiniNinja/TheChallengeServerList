@@ -1,0 +1,30 @@
+{
+    "id": 135247893,
+    "name": "Low",
+    "author": "Kinger01YT",
+    "creators": [],
+    "verifier": "Kinger",
+    "verification": "https://www.youtube.com/watch?v=CjdMXGxP5GE",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+                {
+            "user": "Kiwikut",
+            "link": "https://medal.tv/games/geometry-dash/clips/mguIUG27I9nHJh90p?invite=cr-MSxkSkgsMTY3NjA5MzQ0&tab=home",
+            "percent": 100,
+            "hz": 240
+                },
+                       {
+            "user": "Rubiks",
+            "link": "https://www.youtube.com/watch?v=CjdMXGxP5GE",
+            "percent": 100,
+            "hz": 480
+                },
+                       {
+            "user": "Girg",
+            "link": "https://www.youtube.com/watch?v=PIG65YT7UVA",
+            "percent": 100,
+            "hz": 480
+                }
+    ]
+}
