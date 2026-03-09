@@ -1,0 +1,18 @@
+{
+    "id": 128004111,
+    "name": "3 Way",
+    "author": "Rubiks",
+    "creators": ["RubixTheCube"],
+    "verifier": "Rubiks",
+    "verification": "https://medal.tv/games/geometry-dash/clips/mgw2dU0kjjB5iQADB?invite=cr-MSwwcTksMTY3NjA5MzQ0&v=22&tab=home",
+    "percentToQualify": 100,
+    "password": "Free To Copy",
+    "records": [
+        {
+            "user": "Girg",
+            "link": "https://www.youtube.com/watch?v=rUfE9Sa5eiY",
+            "percent": 100,
+            "hz": 480
+        }
+    ]
+}
