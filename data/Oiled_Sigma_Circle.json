@@ -1,0 +1,24 @@
+{
+    "id": 119469693,
+    "name": "Oiled Sigma Circle",
+    "author": "thebluestinky",
+    "creators": [],
+    "verifier": "DanishHotdog",
+    "verification": "https://www.youtube.com/watch?v=a9gqPTR5Zys",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+                {
+            "user": "Girg",
+            "link": "https://www.youtube.com/watch?v=SnRd06jMrfU",
+            "percent": 100,
+            "hz": 480
+                },
+                       {
+            "user": "Rubiks",
+            "link": "https://medal.tv/games/geometry-dash/clips/mgC8V4jB250r-LT0B?invite=cr-MSxvVlIsMTY3NjA5MzQ0&v=17&tab=home",
+            "percent": 100,
+            "hz": 480
+                }
+    ]
+}
