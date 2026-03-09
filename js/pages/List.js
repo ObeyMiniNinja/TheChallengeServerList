@@ -106,7 +106,7 @@ export default {
                         Achieved the record on the level that is listed on the site - please check the level ID before you submit a record
                     </p>
                     <p>
-                        Have either source audio or clicks/taps in the video. Click sounds mod doesn't count.
+                        Have either source audio or clicks/taps in the video. Click sounds mod isn't allowed.
                     </p>
                     <p>
                         The recording must have a previous attempt shown before the completion, unless the completion is on the first attempt.
@@ -115,7 +115,7 @@ export default {
                         The endscreen must be shown in the completion, and cheat indicator must be enabled unless you are on vanilla GD.
                     </p>
                     <p>
-                        Do not use secret routes or bug routes
+                        Do not use unintentional secret routes or bug routes
                     </p>
                     <p>
                         Do not nerf the level.
