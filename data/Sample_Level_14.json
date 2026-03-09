@@ -1,0 +1,18 @@
+{
+    "id": 135286566,
+    "name": "Green Wind",
+    "author": "DanishHotdog",
+    "creators": ["DanishHotdog", "DanishHotdog", "SwedishHotdog"],
+    "verifier": "DanishHotdog",
+    "verification": "https://www.youtube.com/watch?si=DnoHS4wTbiU8yiAs&v=gWgJ-Lfmtjc&feature=youtu.be",
+    "percentToQualify": 100,
+    "password": "Free To Copy",
+    "records": [
+        {
+            "user": "Girg",
+            "link": "https://www.youtube.com/watch?v=e9Ke2Bt1njg",
+            "percent": 100,
+            "hz": 480
+        }
+    ]
+}
