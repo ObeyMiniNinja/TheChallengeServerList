@@ -1,0 +1,18 @@
+{
+    "id": 135288029,
+    "name": "v13rr3 cl0ud x3",
+    "author": "DanishHotdog",
+    "creators": ["DanishHotdog", "DanishHotdog", "SwedishHotdog"],
+    "verifier": "DanishHotdog",
+    "verification": "https://www.youtube.com/watch?v=gWgJ-Lfmtjc",
+    "percentToQualify": 100,
+    "password": "Free To Copy",
+    "records": [
+        {
+            "user": "Girg",
+            "link": "https://www.youtube.com/watch?v=IIT2nYl7XOM&feature=youtu.be",
+            "percent": 100,
+            "hz": 480
+        }
+    ]
+}
