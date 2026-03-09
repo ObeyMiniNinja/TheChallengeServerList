@@ -100,7 +100,7 @@ export default {
                     </template>
                     <h3>Submission Requirements</h3>
                     <p>
-                        Achieved the record without using any disallowed cheats on pointercrate
+                        Achieved the record without using any disallowed cheats on pointercrate.
                     </p>
                     <p>
                         Achieved the record on the level that is listed on the site - please check the level ID before you submit a record
@@ -109,10 +109,10 @@ export default {
                         Have either source audio or clicks/taps in the video. Click sounds mod doesn't count.
                     </p>
                     <p>
-                        The recording must have a previous attempt and entire death animation shown before the completion, unless the completion is on the first attempt.
+                        The recording must have a previous attempt shown before the completion, unless the completion is on the first attempt.
                     </p>
                     <p>
-                        The endscreen must be shown in the completion.
+                        The endscreen must be shown in the completion, and cheat indicator must be enabled unless you are on vanilla GD.
                     </p>
                     <p>
                         Do not use secret routes or bug routes
