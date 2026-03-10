@@ -32,6 +32,12 @@
             "link": "https://www.youtube.com/watch?v=TrC8X2VAPFs",
             "percent": 100,
             "hz": 360
+            },
+                       {
+            "user": "Kinger",
+            "link": "https://youtu.be/JAat7N02Pg8",
+            "percent": 100,
+            "hz": 240
                 }
     ]
 }
