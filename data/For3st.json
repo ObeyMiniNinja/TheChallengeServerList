@@ -1,6 +1,6 @@
 {
     "id": 135164730,
-    "name": "For3st",
+    "name": "F0r3st",
     "author": "thatdunce",
     "creators": [],
     "verifier": "Dunce",
@@ -18,13 +18,13 @@
             "user": "NotChipz",
             "link": "https://www.youtube.com/watch?v=mNzGeFi2ojA",
             "percent": 100,
-            "hz": 360
+            "hz": 180
                 },
                        {
             "user": "Rubiks",
             "link": "https://medal.tv/games/geometry-dash/clips/mguww0hZTNDIkmWHd?invite=cr-MSx3d24sMTY3NjA5MzQ0&tab=home0",
             "percent": 100,
-            "hz": 180
+            "hz": 360
                        }
     ]
 }
