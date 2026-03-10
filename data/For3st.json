@@ -1,0 +1,30 @@
+{
+    "id": 135164730,
+    "name": "For3st",
+    "author": "thatdunce",
+    "creators": [],
+    "verifier": "Dunce",
+    "verification": "https://medal.tv/games/geometry-dash/clips/mggKTKfFWIA_IecrM?invite=cr-MSwwMjgsNTY0MjExMDE4&v=16&tab=home",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+                {
+            "user": "Kinger",
+            "link": "https://medal.tv/games/geometry-dash/clips/mggPvp5BRX8_G-2TZ?invite=cr-MSxmNVEsNTY3MTY2NjUz&v=7&tab=home",
+            "percent": 100,
+            "hz": 240
+                },
+                       {
+            "user": "NotChipz",
+            "link": "https://www.youtube.com/watch?v=mNzGeFi2ojA",
+            "percent": 100,
+            "hz": 360
+                },
+                       {
+            "user": "Rubiks",
+            "link": "https://medal.tv/games/geometry-dash/clips/mguww0hZTNDIkmWHd?invite=cr-MSx3d24sMTY3NjA5MzQ0&tab=home0",
+            "percent": 100,
+            "hz": 180
+                       }
+    ]
+}
