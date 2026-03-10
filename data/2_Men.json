@@ -1,0 +1,31 @@
+{
+    "id": 135151002,
+    "name": "2 Men",
+    "author": "135203233",
+    "creators": [],
+    "verifier": "Isaac",
+    "verification": "https://medal.tv/games/geometry-dash/clips/mgqNlSIgY4jmuwYk3?invite=cr-MSxxc0osNTQ2ODkxMzcz&v=11&tab=home",
+    "percentToQualify": 100,
+    "password": "Free To Copy",
+    "records": [
+        {
+            "user": "Rubiks",
+            "link": "https://medal.tv/games/geometry-dash/clips/mguyh0gek9Z1gIxJs?invite=cr-MSxNeWgsMTY3NjA5MzQ0&v=9&tab=home",
+            "percent": 100,
+            "hz": 240
+        },
+                     {
+            "user": "NotChipz",
+            "link": "https://medal.tv/games/geometry-dash/clips/mgdqgJOvQx2yFl3vp?invite=cr-MSxBbzMsNTIxMTI4NzAw&tab=home",
+            "percent": 100,
+            "hz": 360
+        },
+                     {
+            "user": "Badburd",
+            "link": "https://www.youtube.com/watch?v=Db0nqCq20-4",
+            "percent": 100,
+            "hz": 360
+                                           }
+        
+    ]
+}
