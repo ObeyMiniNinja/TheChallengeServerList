@@ -1,0 +1,31 @@
+{
+    "id": 135226653,
+    "name": "Holy Loly",
+    "author": "Isaacisbubby2",
+    "creators": [],
+    "verifier": "Isaac",
+    "verification": "https://medal.tv/games/geometry-dash/clips/mgvEraW74daaBrkoW?invite=cr-MSx0QzMsNTQ2ODkxMzcz&v=23&tab=home",
+    "percentToQualify": 100,
+    "password": "Free To Copy",
+    "records": [
+        {
+            "user": "NotChipz",
+            "link": "https://www.youtube.com/watch?v=xClnyS35RwQ",
+            "percent": 100,
+            "hz": 180
+        },
+                     {
+            "user": "Rubiks",
+            "link": "https://medal.tv/games/geometry-dash/clips/mgwBUOOoqjM8tJdtO?invite=cr-MSxJNU8sMTY3NjA5MzQ0&v=18&tab=home",
+            "percent": 100,
+            "hz": 360
+        },
+                     {
+            "user": "Dunce",
+            "link": "https://medal.tv/games/geometry-dash/clips/mgy3x2OtQJ6Rb-Wq7?invite=cr-MSxuM1IsNTY0MjExMDE4&v=26&tab=home",
+            "percent": 100,
+            "hz": 60
+        }
+        
+    ]
+}
