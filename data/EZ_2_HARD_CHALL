@@ -1,0 +1,30 @@
+{
+    "id": 122411336,
+    "name": "ez 2 hard chall",
+    "author": "KiwiKutt",
+    "creators": [],
+    "verifier": "NotChipz",
+    "verification": "122411336",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+                {
+            "user": "Kinger",
+            "link": "https://medal.tv/games/geometry-dash/clips/mgePECpbe8Sd2xngo?invite=cr-MSwzVFYsNTY3MTY2NjUz&tab=home",
+            "percent": 100,
+            "hz": 240
+                },
+                       {
+            "user": "Rubiks",
+            "link": "https://medal.tv/games/geometry-dash/clips/mgtZjvgHI_J_t6Su8?invite=cr-MSw0dlksMTY3NjA5MzQ0&v=32&tab=home",
+            "percent": 100,
+            "hz": 360
+                },
+                       {
+            "user": "Rubiks",
+            "link": "https://medal.tv/games/geometry-dash/clips/mgusjZILQgoi7NrSB?invite=cr-MSw1TXIsMTY3NjA5MzQ0&v=23&tab=home",
+            "percent": 100,
+            "hz": 480
+                }
+    ]
+}
