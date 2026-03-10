@@ -1,0 +1,31 @@
+{
+    "id": 98435649,
+    "name": "Lobotomy Challenge",
+    "author": "DanishHotdog",
+    "creators": [],
+    "verifier": "DanishHotdog",
+    "verification": "https://www.youtube.com/watch?v=gWgJ-Lfmtjc",
+    "percentToQualify": 100,
+    "password": "Free To Copy",
+    "records": [
+        {
+            "user": "NotChipz",
+            "link": "https://www.youtube.com/watch?v=bjLc_Q65wB4",
+            "percent": 100,
+            "hz": 180
+        },
+                {
+            "user": "Rubiks",
+            "link": "https://medal.tv/games/geometry-dash/clips/mgBlRiNzRMKUetO-b?invite=cr-MSxSUWksMTY3NjA5MzQ0&v=27&tab=home",
+            "percent": 100,
+            "hz": 360
+                
+        },
+                {
+            "user": "Dunce",
+            "link": "https://medal.tv/games/geometry-dash/clips/mgCy3vNidTnVHsdfy?invite=cr-MSxXTDMsNTY0MjExMDE4&v=34&tab=home",
+            "percent": 100,
+            "hz": 60
+                }
+    ]
+}
