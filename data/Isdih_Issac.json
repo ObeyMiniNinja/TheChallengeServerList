@@ -1,0 +1,24 @@
+{
+    "id": 135253334,
+    "name": "Isdih Issac",
+    "author": "AndyDApple",
+    "creators": [],
+    "verifier": "AndyTheApple",
+    "verification": "https://www.youtube.com/watch?v=AvTSCqa4isM",
+    "percentToQualify": 100,
+    "password": "Free To Copy",
+    "records": [
+        {
+            "user": "NotChipz",
+            "link": "https://www.youtube.com/watch?v=pozLcH3BqwQ",
+            "percent": 100,
+            "hz": 180
+        },
+              {
+            "user": "Girg",
+            "link": "https://youtu.be/2NLVPuE9Dfg",
+            "percent": 100,
+            "hz": 480
+        }
+    ]
+}
