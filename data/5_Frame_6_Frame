@@ -1,0 +1,31 @@
+{
+    "id": 135241941,
+    "name": "7 Frame 8 Frame",
+    "author": "Isaacisbubby2",
+    "creators": [],
+    "verifier": "Isaac",
+    "verification": "https://medal.tv/games/geometry-dash/clips/mgyRHAfwpH2ZvU9WH?invite=cr-MSxaYlAsNTQ2ODkxMzcz&v=22&tab=home",
+    "percentToQualify": 100,
+    "password": "Free To Copy",
+    "records": [
+        {
+            "user": "NotChipz",
+            "link": "https://www.youtube.com/watch?v=3kmnRqfKfK8",
+            "percent": 100,
+            "hz": 480
+        },
+                     {
+            "user": "Rubiks",
+            "link": "https://medal.tv/games/geometry-dash/clips/mgBurOhDPhwgsUHF4?invite=cr-MSxoWVYsMTY3NjA5MzQ0&v=12&tab=home",
+            "percent": 100,
+            "hz": 360
+        },
+                     {
+            "user": "Girg",
+            "link": "https://www.youtube.com/watch?v=Ea9_cCfSktU",
+            "percent": 100,
+            "hz": 480
+        }
+        
+    ]
+}
