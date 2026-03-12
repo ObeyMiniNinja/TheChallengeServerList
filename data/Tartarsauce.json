@@ -8,6 +8,12 @@
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+                {
+            "user": "NotChipz",
+            "link": "https://youtu.be/sgfcd6vTusY",
+            "percent": 100,
+            "hz": 180
+                }
     ]
 }
         
