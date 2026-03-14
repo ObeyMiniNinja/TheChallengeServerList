@@ -8,6 +8,12 @@
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+                {
+            "user": "Obey",
+            "link": "https://www.youtube.com/watch?v=ewAptoXilpw",
+            "percent": 100,
+            "hz": 300
+                }
     ]
 }
         
