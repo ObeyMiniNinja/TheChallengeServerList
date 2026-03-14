@@ -31,6 +31,12 @@
             "link": "https://www.youtube.com/watch?v=7VvrK6NwQ3Y",
             "percent": 100,
             "hz": 180
+                },
+                       {
+            "user": "BadBurd",
+            "link": "https://www.youtube.com/watch?v=NbQxi_0DiE0",
+            "percent": 100,
+            "hz": 360
                        }
     ]
 }
