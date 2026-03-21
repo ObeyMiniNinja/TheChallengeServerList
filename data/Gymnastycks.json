@@ -20,11 +20,17 @@
             "percent": 100,
             "hz": 180
         },
-                                                {
+                    {
             "user": "Obey",
             "link": "https://www.youtube.com/watch?v=RgYoyk1u9lU",
             "percent": 100,
             "hz": 300
-                                }
+                                },
+                {
+            "user": "Dunce",
+            "link": "https://medal.tv/games/geometry-dash/clips/mlzC50aOzvZd5HlWG?invite=cr-MSw1aXIsNTY0MjExMDE4",
+            "percent": 100,
+            "hz": 60
+                    }
     ]
 }
