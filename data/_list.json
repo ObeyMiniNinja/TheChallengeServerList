@@ -33,6 +33,7 @@
     "Torture_Machine",
     "7_Frame_8_Frame",
     "AvgWaveChallengeSlop",
+    "Wave_Challenge",
     "Tuxedo_Wave",
     "5_Frame_6_Frame",
     "3_Frame_4_Frame",
@@ -41,9 +42,9 @@
     "Yang",
     "Bomboclat",
     "EZ_2_HARD_CHALL",
-    "De_Hoz",
     "Joe_Fart_Challenge",
     "Kingers_Finale",
+    "De_Hoz",
     "Death_Goner_V2",
     "Black_Shiper",
     "Final_Sucer",
@@ -72,6 +73,5 @@
     "100_Pixel_100_Pixel",
     "WaveShipLarpRocket",
     "Evan_Burger",
-    "Lobotomy_Challenge",
-    "Ladder_of_Trip"
+    "Lobotomy_Challenge"
 ]
