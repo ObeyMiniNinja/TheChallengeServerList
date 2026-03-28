@@ -1,0 +1,18 @@
+{
+    "id": 135161506,
+    "name": "Nerfknown Challenge",
+    "author": "thatdunce",
+    "creators": [],
+    "verifier": "Dunce",
+    "verification": "https://youtu.be/JVK1O9X8mbw",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+                {
+            "user": "NotChipz",
+            "link": "https://youtu.be/M_lKhco1Y-4",
+            "percent": 100,
+            "hz": 180
+                }
+      ]
+}
