@@ -10,7 +10,13 @@
     "records": [
                 {
             "user": "KiwiKut",
-            "link": "hhttps://medal.tv/games/geometry-dash/clips/moTTnTo2N1lwLjvO-?invite=cr-MSxMTk8sNTIxMTI4NzAw",
+            "link": "https://medal.tv/games/geometry-dash/clips/moTTnTo2N1lwLjvO-?invite=cr-MSxMTk8sNTIxMTI4NzAw",
+            "percent": 100,
+            "hz": 240
+                    },
+                {
+            "user": "Kinger",
+            "link": "https://medal.tv/games/geometry-dash/clips/mpH8aCEczP3jv0l-C?invite=cr-MSw2NnAsNTY3MTY2NjUz",
             "percent": 100,
             "hz": 240
                     }
