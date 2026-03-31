@@ -1,0 +1,18 @@
+{
+    "id": 136503265,
+    "name": "Violence",
+    "author": "Kinger01YT",
+    "creators": ["Kinger", "ThatDunce"],
+    "verifier": "Kinger",
+    "verification": "https://youtu.be/I3mUyu5zQHA",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+                {
+            "user": "NotChipz",
+            "link": "https://youtu.be/iYQ0m-hR9es",
+            "percent": 100,
+            "hz": 180
+                }
+      ]
+}
