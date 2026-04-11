@@ -25,6 +25,12 @@
             "link": "https://www.youtube.com/watch?v=9Foud8i2KSQ",
             "percent": 100,
             "hz": 360
+        },
+            {
+            "user": "Tragical",
+            "link": "https://youtu.be/GMswtaUZ6Bs?si=QT1HAflemJb3W8Jp",
+            "percent": 100,
+            "hz": 60
         }
     ]
 }
