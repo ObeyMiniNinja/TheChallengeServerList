@@ -3,10 +3,16 @@
     "name": "Dish Soap",
     "author": "QueasyCarBoy",
     "creators": [],
-    "verifier": "NotChipz",
-    "verification": "https://youtu.be/0bMEyCX3-8A",
+    "verifier": "Isaac",
+    "verification": "https://youtu.be/P8KeAfqDzx0?si=tPlDTU-wWiWmdMLF",
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+                        {
+            "user": "NotChipz",
+            "link": "https://youtu.be/0bMEyCX3-8A",
+            "percent": 100,
+            "hz": 180
+    }
   ]
 }
