@@ -1,0 +1,18 @@
+{
+    "id": 138481576,
+    "name": "3 Second Hell 3",
+    "author": "BVex",
+    "creators": ["BVex],
+    "verifier": "Pringle",
+    "verification": "https://youtu.be/4aHxtFZ7b_k",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+            {
+            "user": "NotChipz",
+            "link": "https://youtu.be/DD2Zdc03Txw",
+            "percent": 100,
+            "hz": 180
+        }
+    ]
+}
