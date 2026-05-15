@@ -2,11 +2,18 @@
     "id": 136909591,
     "name": "Aeternus Challenge",
     "author": "KiwiKutt",
-    "creators": ["KiwiKutt", "Artiman"],
+    "creators": ["KiwiKutt", "Asshole"],
     "verifier": "KiwiKut",
     "verification": "https://youtu.be/cSSwjLmMuJY",
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+                    {
+            "user": "NotChipz",
+            "link": "https://www.youtube.com/watch?v=t4pz5AnnUio",
+            "percent": 100,
+            "hz": 480
+            }
+
     ]
 }
