@@ -1,0 +1,18 @@
+{
+    "id": 135285262,
+    "name": "mcwhopper wendys",
+    "author": "Dodi",
+    "creators": ["Dodi"],
+    "verifier": "Dodi",
+    "verification": "https://www.youtube.com/watch?v=AsXr-b_WYgY",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+                                {
+            "user": "NotChipz",
+            "link": "https://www.youtube.com/watch?v=PkRGQOxCwaY",
+            "percent": 100,
+            "hz": 480
+                }
+    ]
+}
