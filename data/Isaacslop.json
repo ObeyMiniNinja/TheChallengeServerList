@@ -1,0 +1,18 @@
+{
+    "id": 136856312,
+    "name": "Isaacslop",
+    "author": "Dodison",
+    "creators": ["Dodi"],
+    "verifier": "Dodi",
+    "verification": "https://youtu.be/AOzr7Pde74o",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+                                {
+            "user": "NotChipz",
+            "link": "https://youtu.be/mYFrc6NBoOM",
+            "percent": 100,
+            "hz": 480
+                }
+    ]
+}
