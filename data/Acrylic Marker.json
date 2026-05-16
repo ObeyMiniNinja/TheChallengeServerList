@@ -1,0 +1,18 @@
+{
+    "id": 136313198,
+    "name": "Acrylic Marker",
+    "author": "Dodi",
+    "creators": ["Dodi"],
+    "verifier": "Dodi",
+    "verification": "https://youtu.be/VwS6NkpRBOE",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+                                {
+            "user": "NotChipz",
+            "link": "https://youtu.be/QoMAZTXxHlY",
+            "percent": 100,
+            "hz": 480
+                }
+    ]
+}
