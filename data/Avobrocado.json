@@ -25,6 +25,12 @@
             "link": "https://youtu.be/4snx2YSA-wQ",
             "percent": 100,
             "hz": 60
+        },
+                                        {
+            "user": "rubiks",
+            "link": "https://www.youtube.com/watch?v=7ekozXIN3rs",
+            "percent": 100,
+            "hz": 480
         }
     ]
 }
