@@ -2,11 +2,18 @@
     "id": 141211733,
     "name": "Warning Two",
     "author": "RubixTheCube",
-    "creators": ["Rubiks", "Kinger"],
+    "creators": ["Rubiks"], ["Kinger"]
     "verifier": "Obey",
     "verification": "https://youtu.be/L7he6aJL7tI",
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+                      {
+            "user": "Rubiks",
+            "link": "https://medal.tv/games/geometry-dash/clips/mMLo8NgJosy7Imq4L?invite=cr-MSxzMXIsMTY3NjA5MzQ0&v=60",
+            "percent": 100,
+            "hz": 480
+        }
     ]
 }
+        
