@@ -1,30 +1,36 @@
 {
     "id": 135285262,
     "name": "mcwhopper wendys",
-    "author": "Dodi",
-    "creators": ["Dodi"],
+    "author": "dodison",
+    "creators": [],
     "verifier": "Dodi",
     "verification": "https://www.youtube.com/watch?v=AsXr-b_WYgY",
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
-                                {
+                        {
             "user": "NotChipz",
             "link": "https://www.youtube.com/watch?v=PkRGQOxCwaY",
             "percent": 100,
-            "hz": 480
+            "hz": 180
                 },
-                                                        {
-            "user": "rubiks",
+            {
+            "user": "Rubiks",
             "link": "https://www.youtube.com/watch?v=7ekozXIN3rs",
             "percent": 100,
             "hz": 480
         },
-                                                                        {
+                                {
             "user": "Kinger",
             "link": "https://youtu.be/-zhl7w4G8fQ",
             "percent": 100,
-            "hz": 240
+            "hz": 480
+        },
+                                                                {
+            "user": "Obey",
+            "link": "https://youtu.be/BrhWqh-RodE",
+            "percent": 100,
+            "hz": 480
         }
     ]
 }
