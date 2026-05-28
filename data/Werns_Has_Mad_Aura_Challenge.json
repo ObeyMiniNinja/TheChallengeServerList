@@ -1,6 +1,6 @@
 {
     "id": 141344192,
-    "name": "Werns  has mad aura",
+    "name": "Werns Has Mad Aura",
     "author": "aspect9667",
     "creators": ["Aspect"],
     "verifier": "Aspect",
@@ -8,5 +8,12 @@
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+                      {
+            "user": "Obey",
+            "link": "https://youtu.be/3JAtMAZAMWI",
+            "percent": 100,
+            "hz": 480
+        }
     ]
 }
+        
