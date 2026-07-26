@@ -8,5 +8,11 @@
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+                       {
+            "user": "rubiks",
+            "link": "https://medal.tv/games/geometry-dash/clips/nbueaTx0mLYCe87yq?invite=cr-MSxYSUQsMTY3NjA5MzQ0",
+            "percent": 100,
+            "hz": 600
+                                }
     ]
 }
