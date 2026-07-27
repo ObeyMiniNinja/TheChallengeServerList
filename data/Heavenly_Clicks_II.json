@@ -8,5 +8,12 @@
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+                      {
+            "user": "Col",
+            "link": "https://www.youtube.com/watch?v=L1rv_BCGLqY",
+            "percent": 100,
+            "hz": 360
+        }
     ]
 }
+        
