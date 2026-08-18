@@ -88,5 +88,29 @@
       { "id": "lvl-2", "title": "Idk a Challenge" },
       { "id": "lvl-3", "title": "Chipz Ahoy" }
     ]
+                        },
+                {
+    "id": "top-1-pack-1",
+    "title": "Top 1 Pack",
+    "description": "Real Top Ones",
+    "pointsReward": 450,
+    "levels": [
+      { "id": "lvl-1", "title": "Heavenly Clicks" },
+      { "id": "lvl-2", "title": "Obey Challenge" },
+      { "id": "lvl-3", "title": "Purgatori Buffed" },
+      { "id": "lvl-4", "title": "Divorce Papers" }
+    ]
+                                    },
+                {
+    "id": "larp-top-1-pack-1",
+    "title": "Larp Top 1 Pack",
+    "description": "Top Ones that werent actually top one",
+    "pointsReward": 200,
+    "levels": [
+      { "id": "lvl-1", "title": "Chipz Ahoy" },
+      { "id": "lvl-2", "title": "Sh Challenge" },
+      { "id": "lvl-3", "title": "The Tiny Fish" }
+    ]
+                    
   }
 ]
