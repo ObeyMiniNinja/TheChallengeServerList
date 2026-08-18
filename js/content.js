@@ -46,6 +46,17 @@ export async function fetchEditors() {
     }
 }
 
+export async function fetchPacks() {
+    try {
+        const packsResult = await fetch(`${dir}/packs.json`);
+        const packs = await packsResult.json();
+        return packs;
+    } catch {
+        console.error('Failed to load packs.');
+        return [];
+    }
+}
+
 export async function fetchLeaderboard() {
     const list = await fetchList();
 
