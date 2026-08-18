@@ -85,6 +85,7 @@ export async function fetchLeaderboard() {
             level: level.name,
             score: score(rank + 1, 100, level.percentToQualify),
             link: level.verification,
+            path: level.path,            // <-- add this so verifications count as a path
         });
 
         // Records
@@ -133,9 +134,9 @@ export async function fetchLeaderboard() {
     // Build per-user completed path sets
     const userCompletedPaths = {};
     Object.entries(scoreMap).forEach(([user, scores]) => {
-        userCompletedPaths[user] = new Set(
-            (scores.completed || []).map((c) => c.path).filter(Boolean),
-        );
+        const completedPaths = (scores.completed || []).map((c) => c.path).filter(Boolean);
+        const verifiedPaths = (scores.verified || []).map((v) => v.path).filter(Boolean);
+        userCompletedPaths[user] = new Set([...completedPaths, ...verifiedPaths]);
     });
 
     // Helper: try to resolve a pack level entry to a level path in our list
