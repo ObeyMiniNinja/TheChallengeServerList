@@ -34,9 +34,10 @@ export default {
                             </td>
                             <td class="total">
                                 <p class="type-label-lg">{{ localize(ientry.total) }}</p>
-                                <p class="type-caption" v-if="ientry.packPoints">(+{{ localize(ientry.packPoints) }} packs)</p>
                             </td>
                             <td class="user" :class="{ 'active': selected == i }">
+                                <!-- Show pack badge near the player's avatar/pfp area instead of next to their name -->
+                                <div class="pfp-badge" v-if="ientry.packPoints">+{{ localize(ientry.packPoints) }}</div>
                                 <button @click="select(i)">
                                     <span class="type-label-lg">{{ ientry.user }}</span>
                                 </button>
