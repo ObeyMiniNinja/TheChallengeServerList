@@ -140,18 +140,13 @@ app.post('/complete-level', (req, res) => {
       const packLevels = db.prepare('SELECT level_key, level_title FROM pack_levels WHERE pack_id = ? ORDER BY level_index').all(pack.id);
       
       // Find if the completed level matches any level in this pack
-      let matchedLevelKey = null;
       for (const pl of packLevels) {
         const dbKey = normalizeKey(pl.level_key || pl.level_title);
         if (dbKey === normalized) {
-          matchedLevelKey = dbKey;
-          break;
+          // Store the normalized DB key (not raw user input)
+          insertCompleted.run(userId, dbKey);
+          break; // Found the level, no need to check other packs
         }
-      }
-
-      // Only mark the level complete if it belongs to this pack
-      if (matchedLevelKey) {
-        insertCompleted.run(userId, matchedLevelKey);
       }
     }
 
