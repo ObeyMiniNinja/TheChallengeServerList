@@ -134,8 +134,8 @@ app.post('/complete-level', (req, res) => {
   const tx = db.transaction(() => {
     ensureUser.run(userId);
 
-    // For each pack in DB, check if this level belongs to it
-    const packs = db.prepare('SELECT id, pointsReward, verifier FROM packs').all();
+    // For each pack in DB, check if this level belongs to it and mark it complete
+    const packs = db.prepare('SELECT id FROM packs').all();
     for (const pack of packs) {
       const packLevels = db.prepare('SELECT level_key, level_title FROM pack_levels WHERE pack_id = ? ORDER BY level_index').all(pack.id);
       
@@ -145,14 +145,14 @@ app.post('/complete-level', (req, res) => {
         if (dbKey === normalized) {
           // Store the normalized DB key (not raw user input)
           insertCompleted.run(userId, dbKey);
-          break; // Found the level, no need to check other packs
+          // Don't break - continue checking other packs
         }
       }
     }
 
     // After marking levels complete, check for newly completed packs
-    const packs2 = db.prepare('SELECT id, pointsReward, verifier FROM packs').all();
-    for (const pack of packs2) {
+    const packsForCompletion = db.prepare('SELECT id, pointsReward, verifier FROM packs').all();
+    for (const pack of packsForCompletion) {
       const packLevels = db.prepare('SELECT level_key, level_title FROM pack_levels WHERE pack_id = ? ORDER BY level_index').all(pack.id);
       const total = packLevels.length;
       if (total === 0) continue;
