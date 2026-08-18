@@ -8,6 +8,7 @@ app.use(express.json());
 
 const PACKS_PATH = path.join(__dirname, 'data', 'packs.json');
 const DB_PATH = path.join(__dirname, 'data', 'app.db');
+const PACK_MAP_PATH = path.join(__dirname, 'data', 'pack_level_map.json');
 
 // Initialize DB and run migrations
 const db = new Database(DB_PATH);
@@ -59,15 +60,33 @@ function loadPacksFile() {
   }
 }
 
+function loadPackLevelMap() {
+  try {
+    if (!fs.existsSync(PACK_MAP_PATH)) return {};
+    return JSON.parse(fs.readFileSync(PACK_MAP_PATH, 'utf8'));
+  } catch (e) {
+    console.error('Failed to load pack_level_map.json', e.message);
+    return {};
+  }
+}
+
 function importPacksToDb() {
   const packs = loadPacksFile();
+  const mapping = loadPackLevelMap();
   const insertPack = db.prepare('INSERT OR REPLACE INTO packs (id, title, description, pointsReward) VALUES (?, ?, ?, ?)');
   const insertPackLevel = db.prepare('INSERT OR REPLACE INTO pack_levels (pack_id, level_index, level_key, level_title) VALUES (?, ?, ?, ?)');
   const tx = db.transaction(() => {
     for (const pack of packs) {
       insertPack.run(pack.id, pack.title, pack.description, pack.pointsReward || 0);
       (pack.levels || []).forEach((lvl, idx) => {
-        insertPackLevel.run(pack.id, idx, lvl.id || '', lvl.title || '');
+        // Prefer an explicit mapping if provided
+        let mapped = null;
+        if (mapping && mapping[pack.id]) {
+          mapped = mapping[pack.id][lvl.id] || mapping[pack.id][lvl.title] || mapping[pack.id][lvl.title?.toString().trim()];
+        }
+        // fallback to provided id/title
+        const levelKey = mapped || lvl.id || lvl.title || '';
+        insertPackLevel.run(pack.id, idx, levelKey, lvl.title || '');
       });
     }
   });
@@ -106,22 +125,6 @@ app.post('/complete-level', (req, res) => {
 
   const ensureUser = db.prepare('INSERT OR IGNORE INTO users (id, points) VALUES (?, 0)');
   const insertCompleted = db.prepare('INSERT OR IGNORE INTO user_completed_levels (user_id, level_key) VALUES (?, ?)');
-
-  // find pack_levels that match this level by level_key or normalized title
-  const packsMatching = db.prepare(`
-    SELECT DISTINCT pl.pack_id
-    FROM pack_levels pl
-    WHERE normalize(pl.level_key) = @norm OR normalize(pl.level_title) = @norm
-  `);
-
-  // better-sqlite3 doesn't have normalize function; so we will load pack_levels and match in JS
-  const allPackLevels = db.prepare('SELECT pack_id, level_index, level_key, level_title FROM pack_levels').all();
-  const matchedPackIds = new Set();
-  for (const pl of allPackLevels) {
-    if (normalizeKey(pl.level_key) === normalized || normalizeKey(pl.level_title) === normalized) {
-      matchedPackIds.add(pl.pack_id);
-    }
-  }
 
   const awarded = [];
 
