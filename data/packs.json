@@ -38,7 +38,7 @@
     "id": "apocalyptic-trilogy",
     "title": "Apocalyptic Trilogy",
     "description": "Challenges of The Apocalyptic Trilogy Pack",
-    "pointsReward": 55,
+    "pointsReward": 50,
     "levels": [
       { "id": "lvl-1", "title": "CaTaClYsM" },
       { "id": "lvl-2", "title": "AFTER math" },
@@ -76,6 +76,17 @@
       { "id": "lvl-1", "title": "Death Goner V2" },
       { "id": "lvl-2", "title": "badburd ass level v2" },
       { "id": "lvl-3", "title": "meat glover town v2" }
+    ]
+                          },
+                {
+    "id": "og-pack",
+    "title": "OG Pack",
+    "description": "OG TCSL Levels",
+    "pointsReward": 45,
+    "levels": [
+      { "id": "lvl-1", "title": "Heavenly Clicks" },
+      { "id": "lvl-2", "title": "Idk a Challenge" },
+      { "id": "lvl-3", "title": "Chipz Ahoy" }
     ]
   }
 ]
