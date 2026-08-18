@@ -49,7 +49,7 @@
     "id": "consistency-pack",
     "title": "Consistency Pack",
     "description": "Consistency Challenges",
-    "pointsReward": 55,
+    "pointsReward": 75,
     "levels": [
       { "id": "lvl-1", "title": "Weiner Challenge" },
       { "id": "lvl-2", "title": "easy consistency" },
