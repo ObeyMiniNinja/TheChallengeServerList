@@ -1,8 +1,8 @@
 [
   {
-    "id": "beginner-pack",
-    "title": "Beginner Pack",
-    "description": "Frame Trilogy",
+    "id": "frame-trilogy",
+    "title": "Frame Trilogy",
+    "description": "All of The Frame Trilogy besides 1 Frame 2 Frame",
     "pointsReward": 100,
     "levels": [
       { "id": "lvl-1", "title": "3_Frame_4_Frame" },
