@@ -159,12 +159,15 @@ app.post('/complete-level', (req, res) => {
           updatePoints.run(pack.pointsReward || 0, userId);
           awarded.push({ packId: pack.id, points: pack.pointsReward || 0, userId });
 
-          // if pack has a verifier, award points to verifier as well and mark the pack claimed for them
+          // if pack has a verifier, award points to verifier as well and mark the pack claimed for them (only once)
           if (pack.verifier) {
             ensureUser.run(pack.verifier);
-            updatePoints.run(pack.pointsReward || 0, pack.verifier);
-            insertClaim.run(pack.verifier, pack.id); // mark claimed for verifier too
-            awarded.push({ packId: pack.id, points: pack.pointsReward || 0, userId: pack.verifier });
+            // Insert claimed row for verifier and only award points if this insert created the row (prevents duplicate awards)
+            const claimVerifier = insertClaim.run(pack.verifier, pack.id);
+            if (claimVerifier.changes === 1) {
+              updatePoints.run(pack.pointsReward || 0, pack.verifier);
+              awarded.push({ packId: pack.id, points: pack.pointsReward || 0, userId: pack.verifier });
+            }
           }
         }
       }
