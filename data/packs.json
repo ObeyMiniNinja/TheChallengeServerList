@@ -1,0 +1,24 @@
+[
+  {
+    "id": "starter-pack",
+    "title": "Starter Pack",
+    "description": "A few easy levels to get started",
+    "pointsReward": 50,
+    "levels": [
+      { "id": "lvl-1", "title": "Bouncy Beginner" },
+      { "id": "lvl-2", "title": "Tiny Steps" },
+      { "id": "lvl-3", "title": "Easy Hop" }
+    ]
+  },
+  {
+    "id": "challenge-pack",
+    "title": "Challenge Pack",
+    "description": "Harder levels",
+    "pointsReward": 150,
+    "levels": [
+      { "id": "lvl-10", "title": "Spin Doom" },
+      { "id": "lvl-11", "title": "Wave Runner" },
+      { "id": "lvl-12", "title": "Triple Spike" }
+    ]
+  }
+]
