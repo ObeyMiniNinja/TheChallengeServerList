@@ -1,7 +1,7 @@
 [
   {
     "id": "frame-trilogy",
-    "title": "Frame Trilogy",
+    "title": "Frame Pack",
     "description": "All of The Frame Trilogy besides 1 Frame 2 Frame",
     "pointsReward": 45,
     "levels": [
@@ -33,5 +33,16 @@
       { "id": "lvl-3", "title": "Swingidy" },
       { "id": "lvl-4", "title": "Balls N Stuff" }
     ]
+            },
+      {
+    "id": "apocalyptic-trilogy",
+    "title": "Apocalyptic Trilogy",
+    "description": "Challenges of The Apocalyptic Trilogy Pack",
+    "pointsReward": 55,
+    "levels": [
+      { "id": "lvl-1", "title": "CaTaClYsM" },
+      { "id": "lvl-2", "title": "AFTER math" },
+      { "id": "lvl-3", "title": "BLOODBATH" }
+    ],
   }
 ]
