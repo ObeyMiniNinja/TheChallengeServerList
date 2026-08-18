@@ -29,7 +29,7 @@
     "pointsReward": 300,
     "levels": [
       { "id": "lvl-1", "title": "Every Sebastian" },
-      { "id": "lvl-2", "title": "Flow Like A River" },
+      { "id": "lvl-2", "title": "Flow Like a River" },
       { "id": "lvl-3", "title": "Swingidy" },
       { "id": "lvl-4", "title": "Balls N Stuff" }
     ]
