@@ -51,6 +51,39 @@ export default {
                         <p v-if="loadingProfile" class="type-caption">Loading profile...</p>
                         <p v-else-if="userProfile">Server points: {{ userProfile.points }}</p>
 
+                        <!-- Packs section moved to the top of the profile -->
+                        <h2 v-if="(entry.packs && (entry.packs.completed.length > 0 || entry.packs.progressed.length > 0))">
+                            Packs
+                            <span v-if="entry.packPoints"> — Pack points: <strong>+{{ localize(entry.packPoints) }}</strong></span>
+                        </h2>
+
+                        <div v-if="entry.packs && entry.packs.completed.length > 0">
+                            <h3>Completed Packs ({{ entry.packs.completed.length }})</h3>
+                            <table class="table">
+                                <tr v-for="p in entry.packs.completed">
+                                    <td class="pack-title"><p class="type-label-lg">{{ p.title }}</p></td>
+                                    <td class="pack-points"><p>+{{ localize(p.points) }}</p></td>
+                                    <td class="pack-claimed" v-if="userProfile">
+                                        <p class="type-caption" v-if="userProfile.claimedPacks && userProfile.claimedPacks.includes(p.id)">Claimed</p>
+                                        <p class="type-caption" v-else>Not claimed</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div v-if="entry.packs && entry.packs.progressed.length > 0">
+                            <h3>In-progress Packs ({{ entry.packs.progressed.length }})</h3>
+                            <table class="table">
+                                <tr v-for="p in entry.packs.progressed">
+                                    <td class="pack-title">
+                                        <p class="type-label-lg">{{ p.title }}</p>
+                                        <p class="type-caption">{{ p.completed }}/{{ p.total }} levels ({{ p.percent }}%)</p>
+                                    </td>
+                                    <td class="pack-points"><p>Potential +{{ localize(p.points) }}</p></td>
+                                </tr>
+                            </table>
+                        </div>
+
                         <h2 v-if="entry.verified && entry.verified.length > 0">Verified ({{ entry.verified.length}})</h2>
                         <table class="table" v-if="entry.verified && entry.verified.length > 0">
                             <tr v-for="score in entry.verified">
@@ -83,39 +116,6 @@ export default {
                                 <td class="score"><p>+{{ localize(score.score) }}</p></td>
                             </tr>
                         </table>
-
-                        <!-- Packs section -->
-                        <h2 v-if="(entry.packs && (entry.packs.completed.length > 0 || entry.packs.progressed.length > 0))">
-                            Packs
-                            <span v-if="entry.packPoints"> — Pack points: <strong>+{{ localize(entry.packPoints) }}</strong></span>
-                        </h2>
-
-                        <div v-if="entry.packs && entry.packs.completed.length > 0">
-                            <h3>Completed Packs ({{ entry.packs.completed.length }})</h3>
-                            <table class="table">
-                                <tr v-for="p in entry.packs.completed">
-                                    <td class="pack-title"><p class="type-label-lg">{{ p.title }}</p></td>
-                                    <td class="pack-points"><p>+{{ localize(p.points) }}</p></td>
-                                    <td class="pack-claimed" v-if="userProfile">
-                                        <p class="type-caption" v-if="userProfile.claimedPacks && userProfile.claimedPacks.includes(p.id)">Claimed</p>
-                                        <p class="type-caption" v-else>Not claimed</p>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-
-                        <div v-if="entry.packs && entry.packs.progressed.length > 0">
-                            <h3>In-progress Packs ({{ entry.packs.progressed.length }})</h3>
-                            <table class="table">
-                                <tr v-for="p in entry.packs.progressed">
-                                    <td class="pack-title">
-                                        <p class="type-label-lg">{{ p.title }}</p>
-                                        <p class="type-caption">{{ p.completed }}/{{ p.total }} levels ({{ p.percent }}%)</p>
-                                    </td>
-                                    <td class="pack-points"><p>Potential +{{ localize(p.points) }}</p></td>
-                                </tr>
-                            </table>
-                        </div>
 
                         <!-- Show claimed packs from server if available -->
                         <div v-if="userProfile && userProfile.claimedPacks && userProfile.claimedPacks.length > 0">
