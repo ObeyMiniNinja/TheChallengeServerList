@@ -44,5 +44,16 @@
       { "id": "lvl-2", "title": "AFTER math" },
       { "id": "lvl-3", "title": "BLOODBATH" }
     ]
+                      },
+      {
+    "id": "consistency-pack",
+    "title": "Consistent Pack",
+    "description": "Consistency Challenges",
+    "pointsReward": 55,
+    "levels": [
+      { "id": "lvl-1", "title": "Weiner Challenge" },
+      { "id": "lvl-2", "title": "easy consistency" },
+      { "id": "lvl-3", "title": "TAN4" }
+    ]
   }
 ]
