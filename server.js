@@ -126,6 +126,8 @@ app.post('/complete-level', (req, res) => {
 
   const ensureUser = db.prepare('INSERT OR IGNORE INTO users (id, points) VALUES (?, 0)');
   const insertCompleted = db.prepare('INSERT OR IGNORE INTO user_completed_levels (user_id, level_key) VALUES (?, ?)');
+  const insertClaim = db.prepare('INSERT OR IGNORE INTO user_claimed_packs (user_id, pack_id) VALUES (?, ?)');
+  const updatePoints = db.prepare('UPDATE users SET points = points + ? WHERE id = ?');
 
   const awarded = [];
 
@@ -150,18 +152,19 @@ app.post('/complete-level', (req, res) => {
       }
 
       if (completedCount === total) {
-        // attempt to claim
-        const claim = db.prepare('INSERT OR IGNORE INTO user_claimed_packs (user_id, pack_id) VALUES (?, ?)').run(userId, pack.id);
-        if (claim.changes === 1) {
+        // attempt to claim for the user
+        const claimUser = insertClaim.run(userId, pack.id);
+        if (claimUser.changes === 1) {
           // newly claimed, award points to user
-          db.prepare('UPDATE users SET points = points + ? WHERE id = ?').run(pack.pointsReward || 0, userId);
-          awarded.push({ packId: pack.id, points: pack.pointsReward || 0, type: 'user' });
-          
-          // if pack has a verifier, award points to verifier as well
+          updatePoints.run(pack.pointsReward || 0, userId);
+          awarded.push({ packId: pack.id, points: pack.pointsReward || 0, userId });
+
+          // if pack has a verifier, award points to verifier as well and mark the pack claimed for them
           if (pack.verifier) {
             ensureUser.run(pack.verifier);
-            db.prepare('UPDATE users SET points = points + ? WHERE id = ?').run(pack.pointsReward || 0, pack.verifier);
-            awarded.push({ packId: pack.id, points: pack.pointsReward || 0, type: 'verifier', verifierId: pack.verifier });
+            updatePoints.run(pack.pointsReward || 0, pack.verifier);
+            insertClaim.run(pack.verifier, pack.id); // mark claimed for verifier too
+            awarded.push({ packId: pack.id, points: pack.pointsReward || 0, userId: pack.verifier });
           }
         }
       }
