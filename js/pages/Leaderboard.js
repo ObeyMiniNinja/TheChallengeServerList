@@ -36,11 +36,6 @@ export default {
                                 <p class="type-label-lg">{{ localize(ientry.total) }}</p>
                             </td>
                             <td class="user" :class="{ 'active': selected == i }">
-                                <div class="avatar-wrap">
-                                    <img class="avatar" :src="ientry.avatarUrl || '/assets/default-avatar.png'" alt="avatar" />
-                                    <div class="pfp-badge" v-if="ientry.packPoints">+{{ localize(ientry.packPoints) }}</div>
-                                </div>
-
                                 <button @click="select(i)" class="user-name-btn">
                                     <span class="type-label-lg">{{ ientry.user }}</span>
                                 </button>
