@@ -55,5 +55,16 @@
       { "id": "lvl-2", "title": "easy consistency" },
       { "id": "lvl-3", "title": "TAN4" }
     ]
+      },
+                {
+    "id": "never-clear",
+    "title": "Never Clear",
+    "description": "You'll Never Clear..",
+    "pointsReward": 85,
+    "levels": [
+      { "id": "lvl-1", "title": "Asa Never Clear" },
+      { "id": "lvl-2", "title": "Pringle Never Clear" },
+      { "id": "lvl-3", "title": "OG Girggg Never Clear" }
+    ]
   }
 ]
