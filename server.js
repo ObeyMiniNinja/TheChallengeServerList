@@ -37,7 +37,8 @@ function migrate() {
       id TEXT PRIMARY KEY,
       title TEXT,
       description TEXT,
-      pointsReward INTEGER
+      pointsReward INTEGER,
+      verifier TEXT
     );
 
     CREATE TABLE IF NOT EXISTS pack_levels (
@@ -73,11 +74,11 @@ function loadPackLevelMap() {
 function importPacksToDb() {
   const packs = loadPacksFile();
   const mapping = loadPackLevelMap();
-  const insertPack = db.prepare('INSERT OR REPLACE INTO packs (id, title, description, pointsReward) VALUES (?, ?, ?, ?)');
+  const insertPack = db.prepare('INSERT OR REPLACE INTO packs (id, title, description, pointsReward, verifier) VALUES (?, ?, ?, ?, ?)');
   const insertPackLevel = db.prepare('INSERT OR REPLACE INTO pack_levels (pack_id, level_index, level_key, level_title) VALUES (?, ?, ?, ?)');
   const tx = db.transaction(() => {
     for (const pack of packs) {
-      insertPack.run(pack.id, pack.title, pack.description, pack.pointsReward || 0);
+      insertPack.run(pack.id, pack.title, pack.description, pack.pointsReward || 0, pack.verifier || null);
       (pack.levels || []).forEach((lvl, idx) => {
         // Prefer an explicit mapping if provided
         let mapped = null;
@@ -134,7 +135,7 @@ app.post('/complete-level', (req, res) => {
     insertCompleted.run(userId, normalized);
 
     // For each pack in DB, check completion
-    const packs = db.prepare('SELECT id, pointsReward FROM packs').all();
+    const packs = db.prepare('SELECT id, pointsReward, verifier FROM packs').all();
     for (const pack of packs) {
       const packLevels = db.prepare('SELECT level_key, level_title FROM pack_levels WHERE pack_id = ? ORDER BY level_index').all(pack.id);
       const total = packLevels.length;
@@ -152,9 +153,16 @@ app.post('/complete-level', (req, res) => {
         // attempt to claim
         const claim = db.prepare('INSERT OR IGNORE INTO user_claimed_packs (user_id, pack_id) VALUES (?, ?)').run(userId, pack.id);
         if (claim.changes === 1) {
-          // newly claimed, award points
+          // newly claimed, award points to user
           db.prepare('UPDATE users SET points = points + ? WHERE id = ?').run(pack.pointsReward || 0, userId);
-          awarded.push({ packId: pack.id, points: pack.pointsReward || 0 });
+          awarded.push({ packId: pack.id, points: pack.pointsReward || 0, type: 'user' });
+          
+          // if pack has a verifier, award points to verifier as well
+          if (pack.verifier) {
+            ensureUser.run(pack.verifier);
+            db.prepare('UPDATE users SET points = points + ? WHERE id = ?').run(pack.pointsReward || 0, pack.verifier);
+            awarded.push({ packId: pack.id, points: pack.pointsReward || 0, type: 'verifier', verifierId: pack.verifier });
+          }
         }
       }
     }
