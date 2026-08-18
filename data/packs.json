@@ -69,8 +69,8 @@
                           },
                 {
     "id": "v2-pack",
-    "title": "V2 PACK",
-    "description": "version 2",
+    "title": "Larp V2 Pack",
+    "description": "version 2 of levels that arent even on the list or dont exist",
     "pointsReward": 85,
     "levels": [
       { "id": "lvl-1", "title": "Death Goner V2" },
