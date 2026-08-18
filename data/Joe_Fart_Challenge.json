@@ -38,6 +38,12 @@
             "link": "https://www.youtube.com/watch?v=RgYoyk1u9lU",
             "percent": 100,
             "hz": 300
+                     },
+                                                        {
+            "user": "Dodi",
+            "link": "https://youtu.be/2d3CX7SrSRU",
+            "percent": 100,
+            "hz": 240
                      }
     ]
 }
