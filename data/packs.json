@@ -1,24 +1,104 @@
 [
   {
-    "id": "starter-pack",
-    "title": "Starter Pack",
-    "description": "A few easy levels to get started",
-    "pointsReward": 50,
+    "id": "beginner-pack",
+    "title": "Beginner Pack",
+    "description": "Start your journey with easy introductory challenges",
+    "pointsReward": 100,
     "levels": [
-      { "id": "lvl-1", "title": "Bouncy Beginner" },
-      { "id": "lvl-2", "title": "Tiny Steps" },
-      { "id": "lvl-3", "title": "Easy Hop" }
+      { "id": "lvl-1", "title": "Easy Consistency" },
+      { "id": "lvl-2", "title": "Dodi Party" },
+      { "id": "lvl-3", "title": "Passing Circle" },
+      { "id": "lvl-4", "title": "Just A Dream" },
+      { "id": "lvl-5", "title": "My Bones" }
+    ]
+  },
+  {
+    "id": "intermediate-pack",
+    "title": "Intermediate Pack",
+    "description": "Test your skills with moderately difficult challenges",
+    "pointsReward": 250,
+    "levels": [
+      { "id": "lvl-10", "title": "3 Seconds In Hell" },
+      { "id": "lvl-11", "title": "Wave Challenge" },
+      { "id": "lvl-12", "title": "Ball Challenge" },
+      { "id": "lvl-13", "title": "Cold Heart" },
+      { "id": "lvl-14", "title": "High" }
     ]
   },
   {
     "id": "challenge-pack",
     "title": "Challenge Pack",
-    "description": "Harder levels",
-    "pointsReward": 150,
+    "description": "Face tougher trials and prove your mastery",
+    "pointsReward": 500,
     "levels": [
-      { "id": "lvl-10", "title": "Spin Doom" },
-      { "id": "lvl-11", "title": "Wave Runner" },
-      { "id": "lvl-12", "title": "Triple Spike" }
+      { "id": "lvl-20", "title": "BLOODBATH" },
+      { "id": "lvl-21", "title": "Acheron Challenge" },
+      { "id": "lvl-22", "title": "Cataclysm" },
+      { "id": "lvl-23", "title": "Black Shiper" },
+      { "id": "lvl-24", "title": "Oiled Sigma Circle" }
+    ]
+  },
+  {
+    "id": "wave-pack",
+    "title": "Wave Pack",
+    "description": "Master wave-based levels and patterns",
+    "pointsReward": 300,
+    "levels": [
+      { "id": "lvl-30", "title": "Wave Challenge" },
+      { "id": "lvl-31", "title": "Wave Expert" },
+      { "id": "lvl-32", "title": "Wave Spam God" },
+      { "id": "lvl-33", "title": "Wave Spam God 6" },
+      { "id": "lvl-34", "title": "Tuxedo Wave" }
+    ]
+  },
+  {
+    "id": "extreme-pack",
+    "title": "Extreme Pack",
+    "description": "Only for the most dedicated players - extreme difficulty",
+    "pointsReward": 1000,
+    "levels": [
+      { "id": "lvl-40", "title": "End Of The TCSL" },
+      { "id": "lvl-41", "title": "Bomboclat" },
+      { "id": "lvl-42", "title": "Goonsintency" },
+      { "id": "lvl-43", "title": "Green Wind" },
+      { "id": "lvl-44", "title": "For3st" }
+    ]
+  },
+  {
+    "id": "frames-pack",
+    "title": "Frames Pack",
+    "description": "Precision-based levels testing your timing",
+    "pointsReward": 400,
+    "levels": [
+      { "id": "lvl-50", "title": "3_Frame_4_Frame" },
+      { "id": "lvl-51", "title": "5_Frame_6_Frame" },
+      { "id": "lvl-52", "title": "7_Frame_8_Frame" },
+      { "id": "lvl-53", "title": "9_Frame_10_Frame" }
+    ]
+  },
+  {
+    "id": "special-pack",
+    "title": "Special Events Pack",
+    "description": "Limited-time and special themed challenges",
+    "pointsReward": 200,
+    "levels": [
+      { "id": "lvl-60", "title": "Xmas Challenge" },
+      { "id": "lvl-61", "title": "June Doom" },
+      { "id": "lvl-62", "title": "Dedicated To Kiwi Heart" },
+      { "id": "lvl-63", "title": "Heavenly Clicks" },
+      { "id": "lvl-64", "title": "Heavenly Clicks II" }
+    ]
+  },
+  {
+    "id": "speedrun-pack",
+    "title": "Speedrun Pack",
+    "description": "Fast-paced levels for speedrunners",
+    "pointsReward": 350,
+    "levels": [
+      { "id": "lvl-70", "title": "Neon Wave" },
+      { "id": "lvl-71", "title": "Gymnastyccks" },
+      { "id": "lvl-72", "title": "Cold Heart" },
+      { "id": "lvl-73", "title": "De Hoz" }
     ]
   }
 ]
