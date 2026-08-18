@@ -66,5 +66,16 @@
       { "id": "lvl-2", "title": "Pringle Never Clear" },
       { "id": "lvl-3", "title": "OG Girggg Never Clear" }
     ]
+                          },
+                {
+    "id": "v2-pack",
+    "title": "V2 PACK",
+    "description": "version 2",
+    "pointsReward": 85,
+    "levels": [
+      { "id": "lvl-1", "title": "Death Goner V2" },
+      { "id": "lvl-2", "title": "badburd ass level v2" },
+      { "id": "lvl-3", "title": "meat glover town v2" }
+    ]
   }
 ]
