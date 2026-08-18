@@ -3,7 +3,7 @@
     "id": "frame-trilogy",
     "title": "Frame Trilogy",
     "description": "All of The Frame Trilogy besides 1 Frame 2 Frame",
-    "pointsReward": 75,
+    "pointsReward": 45,
     "levels": [
       { "id": "lvl-1", "title": "3 Frame 4 Frame" },
       { "id": "lvl-2", "title": "5 Frame 6 Frame" },
