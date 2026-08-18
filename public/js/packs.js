@@ -77,6 +77,21 @@ function renderPacks(packs) {
     prog.textContent = `Progress: ${doneCount}/${pack.levels.length} (${percent}%)`;
     card.appendChild(prog);
 
+    // New: links section (Leaderboard / List / Roulette)
+    const links = document.createElement('div');
+    links.className = 'pack-links';
+    const pages = ['Leaderboard', 'List', 'Roulette'];
+    pages.forEach(page => {
+      const a = document.createElement('a');
+      a.className = 'pack-link-btn';
+      const slug = page.toLowerCase();
+      // Link to simple pages; include pack id as query param so pages can read it
+      a.href = `/${slug}.html?pack=${encodeURIComponent(pack.id)}`;
+      a.textContent = page;
+      links.appendChild(a);
+    });
+    card.appendChild(links);
+
     const claim = document.createElement('button');
     claim.className = 'claim-btn';
     const claimedKey = `pack_claimed_${pack.id}`;
@@ -117,7 +132,7 @@ function claimPack(pack) {
   // For server-backed: call POST /api/users/:id/claim-pack
 }
 
-function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c=> ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[c])); }
+function escapeHtml(s){ return String(s).replace(/[&<>\"']+/g, c=> ({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":"&#39;"}[c])); }
 
 // Initialize
 if (document.readyState === 'loading') {
