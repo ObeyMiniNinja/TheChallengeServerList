@@ -1,65 +1,181 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const Database = require('better-sqlite3');
 
 const app = express();
 app.use(express.json());
 
 const PACKS_PATH = path.join(__dirname, 'data', 'packs.json');
-const USERS_PATH = path.join(__dirname, 'data', 'users.json');
+const DB_PATH = path.join(__dirname, 'data', 'app.db');
 
-function loadPacks() {
-  return JSON.parse(fs.readFileSync(PACKS_PATH, 'utf8'));
-}
-function loadUsers() {
-  try { return JSON.parse(fs.readFileSync(USERS_PATH, 'utf8')); }
-  catch (e) { return {}; }
-}
-function saveUsers(users) {
-  fs.writeFileSync(USERS_PATH, JSON.stringify(users, null, 2), 'utf8');
+// Initialize DB and run migrations
+const db = new Database(DB_PATH);
+
+function migrate() {
+  db.exec(`
+    PRAGMA journal_mode = WAL;
+    CREATE TABLE IF NOT EXISTS users (
+      id TEXT PRIMARY KEY,
+      points INTEGER DEFAULT 0
+    );
+
+    CREATE TABLE IF NOT EXISTS user_completed_levels (
+      user_id TEXT,
+      level_key TEXT,
+      PRIMARY KEY(user_id, level_key)
+    );
+
+    CREATE TABLE IF NOT EXISTS user_claimed_packs (
+      user_id TEXT,
+      pack_id TEXT,
+      PRIMARY KEY(user_id, pack_id)
+    );
+
+    CREATE TABLE IF NOT EXISTS packs (
+      id TEXT PRIMARY KEY,
+      title TEXT,
+      description TEXT,
+      pointsReward INTEGER
+    );
+
+    CREATE TABLE IF NOT EXISTS pack_levels (
+      pack_id TEXT,
+      level_index INTEGER,
+      level_key TEXT,
+      level_title TEXT,
+      PRIMARY KEY(pack_id, level_index)
+    );
+  `);
 }
 
-// POST /complete-level
-// body: { userId, levelId }
-// Marks level complete for user and awards any packs fully completed that haven't been claimed.
+migrate();
+
+function loadPacksFile() {
+  try {
+    return JSON.parse(fs.readFileSync(PACKS_PATH, 'utf8'));
+  } catch (e) {
+    return [];
+  }
+}
+
+function importPacksToDb() {
+  const packs = loadPacksFile();
+  const insertPack = db.prepare('INSERT OR REPLACE INTO packs (id, title, description, pointsReward) VALUES (?, ?, ?, ?)');
+  const insertPackLevel = db.prepare('INSERT OR REPLACE INTO pack_levels (pack_id, level_index, level_key, level_title) VALUES (?, ?, ?, ?)');
+  const tx = db.transaction(() => {
+    for (const pack of packs) {
+      insertPack.run(pack.id, pack.title, pack.description, pack.pointsReward || 0);
+      (pack.levels || []).forEach((lvl, idx) => {
+        insertPackLevel.run(pack.id, idx, lvl.id || '', lvl.title || '');
+      });
+    }
+  });
+  tx();
+}
+
+// Import on startup so DB is in sync with packs.json
+importPacksToDb();
+
+// Utilities
+function normalizeKey(s) {
+  if (!s) return '';
+  return s
+    .toString()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '');
+}
+
+// Admin endpoint to re-import packs.json into DB
+app.post('/import-packs', (req, res) => {
+  try {
+    importPacksToDb();
+    res.json({ ok: true });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
+// Complete level endpoint (atomic): accepts { userId, levelKeyOrTitle }
 app.post('/complete-level', (req, res) => {
-  const { userId, levelId } = req.body;
-  if (!userId || !levelId) return res.status(400).json({ error: 'userId and levelId required' });
+  const { userId, level } = req.body; // level can be level_key (pack level id) or level title/path
+  if (!userId || !level) return res.status(400).json({ error: 'userId and level required' });
 
-  const packs = loadPacks();
-  const users = loadUsers();
+  const normalized = normalizeKey(level);
 
-  if (!users[userId]) {
-    users[userId] = { id: userId, points: 0, completedLevels: [], claimedPacks: [] };
+  const ensureUser = db.prepare('INSERT OR IGNORE INTO users (id, points) VALUES (?, 0)');
+  const insertCompleted = db.prepare('INSERT OR IGNORE INTO user_completed_levels (user_id, level_key) VALUES (?, ?)');
+
+  // find pack_levels that match this level by level_key or normalized title
+  const packsMatching = db.prepare(`
+    SELECT DISTINCT pl.pack_id
+    FROM pack_levels pl
+    WHERE normalize(pl.level_key) = @norm OR normalize(pl.level_title) = @norm
+  `);
+
+  // better-sqlite3 doesn't have normalize function; so we will load pack_levels and match in JS
+  const allPackLevels = db.prepare('SELECT pack_id, level_index, level_key, level_title FROM pack_levels').all();
+  const matchedPackIds = new Set();
+  for (const pl of allPackLevels) {
+    if (normalizeKey(pl.level_key) === normalized || normalizeKey(pl.level_title) === normalized) {
+      matchedPackIds.add(pl.pack_id);
+    }
   }
-  const user = users[userId];
 
-  // idempotently add completed level
-  if (!user.completedLevels.includes(levelId)) {
-    user.completedLevels.push(levelId);
-  }
-
-  // scan packs to award points for any packs now fully completed
   const awarded = [];
-  packs.forEach(pack => {
-    const packLevelIds = (pack.levels || []).map(l => l.id);
-    const hasAll = packLevelIds.length > 0 && packLevelIds.every(lid => user.completedLevels.includes(lid));
-    if (hasAll && !user.claimedPacks.includes(pack.id)) {
-      user.points += (pack.pointsReward || 0);
-      user.claimedPacks.push(pack.id);
-      awarded.push({ packId: pack.id, points: pack.pointsReward || 0 });
+
+  const tx = db.transaction(() => {
+    ensureUser.run(userId);
+    // Store completed level by the normalized form
+    insertCompleted.run(userId, normalized);
+
+    // For each pack in DB, check completion
+    const packs = db.prepare('SELECT id, pointsReward FROM packs').all();
+    for (const pack of packs) {
+      const packLevels = db.prepare('SELECT level_key, level_title FROM pack_levels WHERE pack_id = ? ORDER BY level_index').all(pack.id);
+      const total = packLevels.length;
+      if (total === 0) continue;
+
+      // count completed by this user for pack
+      let completedCount = 0;
+      for (const pl of packLevels) {
+        const key = normalizeKey(pl.level_key || pl.level_title);
+        const row = db.prepare('SELECT 1 FROM user_completed_levels WHERE user_id = ? AND level_key = ?').get(userId, key);
+        if (row) completedCount += 1;
+      }
+
+      if (completedCount === total) {
+        // attempt to claim
+        const claim = db.prepare('INSERT OR IGNORE INTO user_claimed_packs (user_id, pack_id) VALUES (?, ?)').run(userId, pack.id);
+        if (claim.changes === 1) {
+          // newly claimed, award points
+          db.prepare('UPDATE users SET points = points + ? WHERE id = ?').run(pack.pointsReward || 0, userId);
+          awarded.push({ packId: pack.id, points: pack.pointsReward || 0 });
+        }
+      }
     }
   });
 
-  saveUsers(users);
-  return res.json({ userId, points: user.points, awarded, claimedPacks: user.claimedPacks });
+  try {
+    tx();
+    const user = db.prepare('SELECT id, points FROM users WHERE id = ?').get(userId);
+    // return user's claimed packs for convenience
+    const claimed = db.prepare('SELECT pack_id FROM user_claimed_packs WHERE user_id = ?').all(userId).map(r => r.pack_id);
+    res.json({ userId: user.id, points: user.points, awarded, claimedPacks: claimed });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
 });
 
+// Get user state (including completed levels and claimed packs)
 app.get('/user/:userId', (req, res) => {
-  const users = loadUsers();
-  const u = users[req.params.userId];
-  if (!u) return res.status(404).json({ error: 'user not found' });
-  res.json(u);
+  const userId = req.params.userId;
+  const user = db.prepare('SELECT id, points FROM users WHERE id = ?').get(userId);
+  if (!user) return res.status(404).json({ error: 'user not found' });
+  const completed = db.prepare('SELECT level_key FROM user_completed_levels WHERE user_id = ?').all(userId).map(r => r.level_key);
+  const claimed = db.prepare('SELECT pack_id FROM user_claimed_packs WHERE user_id = ?').all(userId).map(r => r.pack_id);
+  res.json({ id: user.id, points: user.points, completedLevels: completed, claimedPacks: claimed });
 });
 
 const PORT = process.env.PORT || 3000;
