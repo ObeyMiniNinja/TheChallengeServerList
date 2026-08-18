@@ -3,7 +3,7 @@
     "id": "frame-trilogy",
     "title": "Frame Trilogy",
     "description": "All of The Frame Trilogy besides 1 Frame 2 Frame",
-    "pointsReward": 100,
+    "pointsReward": 75,
     "levels": [
       { "id": "lvl-1", "title": "3 Frame 4 Frame" },
       { "id": "lvl-2", "title": "5 Frame 6 Frame" },
@@ -12,15 +12,14 @@
     ]
   },
   {
-    "id": "challenge-pack-2",
-    "title": "Challenge Pack 2",
-    "description": "Second challenge pack with new levels",
-    "pointsReward": 150,
+    "id": "riot-pack",
+    "title": "Riot Pack",
+    "description": "The Riot Pack But Challenge Versions",
+    "pointsReward": 100,
     "levels": [
-      { "id": "lvl-1", "title": "Challenge 1" },
-      { "id": "lvl-2", "title": "Challenge 2" },
-      { "id": "lvl-3", "title": "Challenge 3" },
-      { "id": "lvl-4", "title": "Challenge 4" }
+      { "id": "lvl-1", "title": "Tartarus Challenge" },
+      { "id": "lvl-2", "title": "Acheron Challenge" },
+      { "id": "lvl-3", "title": "Aeternus Challenge" }
     ]
   }
 ]
