@@ -5,10 +5,10 @@
     "description": "All of The Frame Trilogy besides 1 Frame 2 Frame",
     "pointsReward": 100,
     "levels": [
-      { "id": "lvl-1", "title": "3_Frame_4_Frame" },
-      { "id": "lvl-2", "title": "5_Frame_6_Frame" },
-      { "id": "lvl-3", "title": "7_Frame_8_Frame" },
-      { "id": "lvl-4", "title": "9_Frame_10_Frame" }
+      { "id": "lvl-1", "title": "3 Frame 4 Frame" },
+      { "id": "lvl-2", "title": "5 Frame 6 Frame" },
+      { "id": "lvl-3", "title": "7 Frame 8 Frame" },
+      { "id": "lvl-4", "title": "9 Frame 10 Frame" }
     ]
   }
 ]
