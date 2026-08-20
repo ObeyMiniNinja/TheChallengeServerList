@@ -25,7 +25,7 @@
       {
     "id": "single-gamemode-pack-1",
     "title": "Single Gamemode Pack I",
-    "description": "The hardest single gamemode gameplay",
+    "description": "Single gamemode gameplay",
     "pointsReward": 300,
     "levels": [
       { "id": "lvl-1", "title": "Every Sebastian" },
