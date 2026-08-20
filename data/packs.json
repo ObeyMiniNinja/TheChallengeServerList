@@ -110,8 +110,9 @@
       { "id": "lvl-1", "title": "Chipz Ahoy" },
       { "id": "lvl-2", "title": "Sh Challenge" },
       { "id": "lvl-3", "title": "The Tiny Fish" }
-    ],
-                                    {
+    ]
+                },
+    {
     "id": "underrated-challenges-pack",
     "title": "Underrated Pack",
     "description": "Challenges that were once super underrated",
