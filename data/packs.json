@@ -110,6 +110,17 @@
       { "id": "lvl-1", "title": "Chipz Ahoy" },
       { "id": "lvl-2", "title": "Sh Challenge" },
       { "id": "lvl-3", "title": "The Tiny Fish" }
+    ],
+                                    {
+    "id": "underrated-challenges-pack",
+    "title": "Underrated Pack",
+    "description": "Challenges that were once super underrated",
+    "pointsReward": 150,
+    "levels": [
+      { "id": "lvl-1", "title": "badburd ass level v2" },
+      { "id": "lvl-2", "title": "June Doom" },
+      { "id": "lvl-3", "title": "Comcok" },
+      { "id": "lvl-4", "title": "Fhyco" }
     ]
                     
   }
