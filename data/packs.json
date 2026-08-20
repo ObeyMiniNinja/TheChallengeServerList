@@ -24,14 +24,15 @@
   },
       {
     "id": "single-gamemode-pack-1",
-    "title": "Hard Single Gamemode Pack I",
+    "title": "Single Gamemode Pack I",
     "description": "The hardest single gamemode gameplay",
     "pointsReward": 300,
     "levels": [
       { "id": "lvl-1", "title": "Every Sebastian" },
       { "id": "lvl-2", "title": "Flow Like a River" },
       { "id": "lvl-3", "title": "Swingidy" },
-      { "id": "lvl-4", "title": "Balls N Stuff" }
+      { "id": "lvl-4", "title": "Balls N Stuff" },
+      { "id": "lvl-5", "title": "Make Greg Dance" }
     ]
             },
       {
