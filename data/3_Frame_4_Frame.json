@@ -49,7 +49,14 @@
             "link": "https://www.youtube.com/watch?v=7ekozXIN3rs",
             "percent": 100,
             "hz": 480
-        }
+        },
+                                                        {
+            "user": "kingjay",
+            "link": "https://youtu.be/0Tr1PT4WP9w?si=MeROShIarfoz1G-E",
+            "percent": 100,
+            "hz": 60
+                                }
+
         
     ]
 }
