@@ -1,0 +1,18 @@
+{
+    "id": 147812636,
+    "name": "2 to the power of 2",
+    "author": "zion4c",
+    "creators": ["zion4c"],
+    "verifier": "zion4c",
+    "verification": "https://youtu.be/x7q5eWeel5A",
+    "percentToQualify": "100",
+    "password": "Free To Copy",
+    "records": [
+               {
+            "user": "NotChipz",
+            "link": "https://youtu.be/WsslzkFQLB8",
+            "percent": 100,
+            "hz": 480
+        }
+    ]
+}
