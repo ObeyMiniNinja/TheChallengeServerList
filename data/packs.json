@@ -127,6 +127,16 @@
       { "id": "lvl-3", "title": "Comcok" },
       { "id": "lvl-4", "title": "Fhyco" }
     ]
-                    
+            },      
+        {
+    "id": "random-challenges",
+    "title": "Unknown Challenges Pack",
+    "description": "Challenges that nobody knows",
+    "pointsReward": 30,
+    "levels": [
+      { "id": "lvl-1", "title": "Grief Memory" },
+      { "id": "lvl-2", "title": "ttalhcsj" },
+      { "id": "lvl-3", "title": "Cluttered" }
+    ]
   }
 ]
