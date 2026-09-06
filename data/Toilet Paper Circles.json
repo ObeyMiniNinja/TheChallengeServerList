@@ -4,9 +4,15 @@
     "author": "zion4c",
     "creators": ["zion"],
     "verifier": "zion4c",
-    "verification": "147783192 https://youtu.be/_GkFKWJBroA",
+    "verification": "https://youtu.be/_GkFKWJBroA",
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+                                                                                    {
+            "user": "Riff",
+            "link": "https://medal.tv/games/geometry-dash/clips/ntozLsKGwD9PYa4Of?invite=cr-MSxQNlMsMzc2MDQzMTQ1",
+            "percent": 100,
+            "hz": 144
+        }
     ]
 }
