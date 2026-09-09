@@ -138,5 +138,16 @@
       { "id": "lvl-2", "title": "ttalhcsj" },
       { "id": "lvl-3", "title": "Cluttered" }
     ]
+        },
+                    {
+    "id": "manks-but",
+    "title": "Manks in different years",
+    "description": "Manks but in..",
+    "pointsReward": 150,
+    "levels": [
+      { "id": "lvl-1", "title": "manks but in 2011" },
+      { "id": "lvl-2", "title": "Manks But In 2012" },
+      { "id": "lvl-3", "title": "Manks But In 2013" }
+    ]
   }
 ]
