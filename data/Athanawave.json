@@ -3,10 +3,16 @@
     "name": "Athanawave",
     "author": "NotChipz",
     "creators": ["NotChipz"],
-    "verifier": "rubiks",
-    "verification": "https://youtu.be/XHknYUsbfs8",
+    "verifier": "Girg",
+    "verification": "https://youtu.be/3GZn4BKz5WE",
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+                  {
+            "user": "Rubiks",
+            "link": "https://youtu.be/XHknYUsbfs8",
+            "percent": 100,
+            "hz": 550
+                }
     ]
 }
