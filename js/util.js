@@ -6,18 +6,31 @@ export function getYoutubeIdFromUrl(url) {
 }
 
 /**
- * Medal clip pages can be embedded by adding the embed query parameter.
- * Keep the existing query string (for example, an invite parameter) intact.
+ * Convert a Medal clip page into Medal's canonical embeddable URL.
+ *
+ * Medal share links commonly use /games/<game>/clips/<clip-id> and may
+ * include invite/tracking query parameters. The iframe player expects the
+ * shorter /clip/<clip-id> URL; passing the share URL (or adding ?embed=1)
+ * causes Medal to display an error.
  */
 export function getMedalEmbedUrl(video) {
     try {
         const url = new URL(video);
-        if (url.hostname !== 'medal.tv' && !url.hostname.endsWith('.medal.tv')) {
+        const hostname = url.hostname.toLowerCase();
+        if (hostname !== 'medal.tv' && !hostname.endsWith('.medal.tv')) {
             return null;
         }
 
-        url.searchParams.set('embed', '1');
-        return url.toString();
+        const parts = url.pathname.split('/').filter(Boolean);
+        const clipIndex = parts.findIndex((part) => part.toLowerCase() === 'clips');
+        const clipId = clipIndex >= 0 ? parts[clipIndex + 1] : null;
+
+        // Also accept already-canonical /clip/<id> links.
+        const canonicalId =
+            parts[0]?.toLowerCase() === 'clip' ? parts[1] : clipId;
+        if (!canonicalId) return null;
+
+        return `https://medal.tv/clip/${encodeURIComponent(canonicalId)}`;
     } catch {
         return null;
     }
