@@ -5,7 +5,28 @@ export function getYoutubeIdFromUrl(url) {
     )?.[1] ?? '';
 }
 
+/**
+ * Medal clip pages can be embedded by adding the embed query parameter.
+ * Keep the existing query string (for example, an invite parameter) intact.
+ */
+export function getMedalEmbedUrl(video) {
+    try {
+        const url = new URL(video);
+        if (url.hostname !== 'medal.tv' && !url.hostname.endsWith('.medal.tv')) {
+            return null;
+        }
+
+        url.searchParams.set('embed', '1');
+        return url.toString();
+    } catch {
+        return null;
+    }
+}
+
 export function embed(video) {
+    const medalUrl = getMedalEmbedUrl(video);
+    if (medalUrl) return medalUrl;
+
     return `https://www.youtube.com/embed/${getYoutubeIdFromUrl(video)}`;
 }
 
@@ -17,7 +38,7 @@ export function getThumbnailFromId(id) {
     return `https://img.youtube.com/vi/${id}/mqdefault.jpg`;
 }
 
-// https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+// https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-an-array
 export function shuffle(array) {
     let currentIndex = array.length, randomIndex;
 
@@ -27,7 +48,7 @@ export function shuffle(array) {
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex--;
 
-        // And swap it with the current element.
+        // And swap it with the last element.
         [array[currentIndex], array[randomIndex]] = [
             array[randomIndex],
             array[currentIndex],
