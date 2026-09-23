@@ -9,10 +9,16 @@
     "password": "Free To Copy",
     "records": [
         {
-        "user": "rubiks",
+            "user": "rubiks",
             "link": "https://www.youtube.com/watch?v=jL9wdHfuego",
             "percent": 100,
             "hz": 600
+        },
+               {
+            "user": "Girg",
+            "link": "https://youtu.be/7ZXNHIEK6fQ",
+            "percent": 100,
+            "hz": 480
         }
     ]
 }   
