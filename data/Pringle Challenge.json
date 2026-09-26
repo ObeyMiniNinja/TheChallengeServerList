@@ -3,11 +3,17 @@
     "name": "Pringle Challenge",
     "author": "KiwiKutt",
     "creators": ["KiwiKutt"],
-    "verifier": "Girg",
-    "verification": "https://youtu.be/8PMQAcL98Ws",
+    "verifier": "G3",
+    "verification": "https://youtu.be/auvhlDaIWl0",
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
+                                                  {
+            "user": "Girg",
+            "link": "https://youtu.be/8PMQAcL98Ws",
+            "percent": 100,
+            "hz": 480
+                                },
                                             {
             "user": "Obey",
             "link": "https://www.youtube.com/live/ZMR-L_vLke8",
