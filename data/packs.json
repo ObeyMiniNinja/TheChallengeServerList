@@ -149,5 +149,16 @@
       { "id": "lvl-2", "title": "Manks But In 2012" },
       { "id": "lvl-3", "title": "Manks But In 2013" }
     ]
+                                },
+                    {
+    "id": "2p-levels",
+    "title": "OG 2P Challenges",
+    "description": "First 3 2P Challenges",
+    "pointsReward": 75,
+    "levels": [
+      { "id": "lvl-1", "title": "Polardual ig" },
+      { "id": "lvl-2", "title": "When I Code On My Pendence" },
+      { "id": "lvl-3", "title": "im codeing it so good" }
+    ]
   }
 ]
