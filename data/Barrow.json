@@ -19,6 +19,12 @@
             "link": "https://www.youtube.com/live/ZMR-L_vLke8",
             "percent": 100,
             "hz": 2500
-                                }
+                                },
+                                                                        {
+            "user": "Dunce",
+            "link": "https://youtu.be/18Rz0D5EHPg",
+            "percent": 100,
+            "hz": 360
+        }
   ]
 }
