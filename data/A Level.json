@@ -3,16 +3,10 @@
     "name": "A Level",
     "author": "AndyTheApple",
     "creators": ["Andy, Parker"],
-    "verifier": "AndyTheApple",
-    "verification": "https://youtu.be/qDE5v7zbQ3E",
+    "verifier": "Obey",
+    "verification": "https://www.youtube.com/watch?v=0-gfRnerKTY",
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
-                     {
-            "user": "Obey",
-            "link": "https://www.youtube.com/watch?v=0-gfRnerKTY",
-            "percent": 100,
-            "hz": 600
-                }
     ]
 }
