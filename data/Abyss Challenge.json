@@ -19,6 +19,12 @@
             "link": "https://www.youtube.com/live/ZMR-L_vLke8",
             "percent": 100,
             "hz": 2500
+                                },
+                                                    {
+            "user": "NotChipz",
+            "link": "https://www.youtube.com/watch?v=U8b1QJC_-kY",
+            "percent": 100,
+            "hz": 480
                                 }
     ]
 }
