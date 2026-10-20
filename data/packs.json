@@ -171,5 +171,20 @@
       { "id": "lvl-2", "title": "Challengement" },
       { "id": "lvl-3", "title": "Poopouement" }
     ]
+                    },
+                                            {
+    "id": "Nine-Circles",
+    "title": "Nine Circles",
+    "description": "Nine Circles Challenges",
+    "pointsReward": 75,
+    "levels": [
+      { "id": "lvl-1", "title": "Spider Circles" },
+      { "id": "lvl-2", "title": "Headwave" },
+      { "id": "lvl-3", "title": "Sonic Wavenge" },
+      { "id": "lvl-4", "title": "Toilet Paper Circles" },
+      { "id": "lvl-5", "title": "Ring Worm" },
+      { "id": "lvl-6", "title": "Oiled Sigma Circle" },
+      { "id": "lvl-7", "title": "Wave Expert" }
+    ]
   }
 ]
