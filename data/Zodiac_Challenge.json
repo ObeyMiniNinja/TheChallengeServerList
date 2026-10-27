@@ -1,34 +1,34 @@
 {
-    "id": 56547653,
-    "name": "Zodiac Challenge",
-    "author": "ItzPiccle",
-    "creators": ["ItzPiccle"],
-    "verifier": "NotChipz",
-    "verification": "https://youtu.be/M1FKdtvAO_M",
+    "id": 135157565,
+    "name": "Death Goner",
+    "author": "Isaacisbubby2",
+    "creators": ["Isaac"],
+    "verifier": "Isaac",
+    "verification": "https://medal.tv/games/geometry-dash/clips/mgebH84tJAqdFAFIU?invite=cr-MSx5dlksNTQ2ODkxMzcz&v=37&tab=home",
     "percentToQualify": "100",
     "password": "Free To Copy",
     "records": [
         {
-            "user": "Isaac",
-            "link": "https://medal.tv/games/geometry-dash/clips/mpEhT8iFbLaKbObAQ/spok?invite=cr-MSxWdnUsNTQ2ODkxMzczLA",
+            "user": "NotChipz",
+            "link": "https://www.youtube.com/watch?v=fEN1HsxlA6I",
             "percent": 100,
-            "hz": 144
+            "hz": 480
         },
         {
             "user": "Kinger",
-            "link": "https://medal.tv/games/geometry-dash/clips/mpF6CfbaAxJ4fE_oF?invite=cr-MSx0MjksNTY3MTY2NjUz",
+            "link": "https://medal.tv/games/geometry-dash/clips/mgeI96fzBzoFJosJz?invite=cr-MSxaM3csNTY3MTY2NjUz&v=12&tab=home",
             "percent": 100,
             "hz": 240
         },
     {
-            "user": "BadBurd",
-            "link": "https://www.youtube.com/watch?v=9Foud8i2KSQ",
+            "user": "rubiks",
+            "link": "https://medal.tv/games/geometry-dash/clips/mguzU3s9s9UGxR-Uw?invite=cr-MSxTcGEsMTY3NjA5MzQ0&tab=home",
             "percent": 100,
-            "hz": 360
+            "hz": 480
         },
             {
-            "user": "Tragical",
-            "link": "https://youtu.be/GMswtaUZ6Bs?si=QT1HAflemJb3W8Jp",
+            "user": "BadBurd",
+            "link": "https://www.youtube.com/watch?v=Zv-4h8rwpE0",
             "percent": 100,
             "hz": 60
         }
