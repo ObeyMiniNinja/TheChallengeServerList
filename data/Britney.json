@@ -31,6 +31,12 @@
             "link": "https://youtu.be/3c8t9yPeHbg?is=2PBTetvGv2ik9xjI",
             "percent": 100,
             "hz": 80
-                      }
+                      },
+                                {
+            "user": "Dunce",
+            "link": "https://www.youtube.com/watch?v=AzFIBsojQrw",
+            "percent": 100,
+            "hz": 480
+                }
     ]
 }
