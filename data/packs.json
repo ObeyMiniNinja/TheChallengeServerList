@@ -175,17 +175,29 @@
                     },
                                             {
     "id": "Nine-Circles",
-    "title": "Nine Circles",
+    "title": "Circles Pack 1",
+    "description": "Nine Circles Challenges",
+    "pointsReward": 175,
+    "levels": [
+      { "id": "lvl-1", "title": "Toilet Paper Circles" },
+      { "id": "lvl-2", "title": "Ring Worm" },
+      { "id": "lvl-3", "title": "Oiled Sigma Circle" },
+      { "id": "lvl-4", "title": "Wave Expert" },
+      { "id": "lvl-5", "title": "Sonic Wavenge" },
+      { "id": "lvl-6", "title": "Neon Wave" }
+    ]
+        {
+    "id": "Nine-Circles-2",
+    "title": "Circles Pack 2",
     "description": "Nine Circles Challenges",
     "pointsReward": 250,
     "levels": [
-      { "id": "lvl-1", "title": "Spider Circles" },
-      { "id": "lvl-2", "title": "Headwave" },
-      { "id": "lvl-3", "title": "Sonic Wavenge" },
-      { "id": "lvl-4", "title": "Toilet Paper Circles" },
-      { "id": "lvl-5", "title": "Ring Worm" },
-      { "id": "lvl-6", "title": "Oiled Sigma Circle" },
-      { "id": "lvl-7", "title": "Wave Expert" }
+      { "id": "lvl-1", "title": "Headwave" },
+      { "id": "lvl-2", "title": "Wave Expert" },
+      { "id": "lvl-3", "title": "TUNG" },
+      { "id": "lvl-4", "title": "Spider Circles" },
+      { "id": "lvl-5", "title": "Just A Dream" },
+      { "id": "lvl-6", "title": "Electrick Circles Z" }
     ]
   }
 ]
