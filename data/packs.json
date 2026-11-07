@@ -179,10 +179,10 @@
     "description": "Nine Circles Challenges",
     "pointsReward": 175,
     "levels": [
-      { "id": "lvl-1", "title": "Toilet Paper Circles" },
-      { "id": "lvl-2", "title": "Ring Worm" },
-      { "id": "lvl-3", "title": "Oiled Sigma Circle" },
-      { "id": "lvl-4", "title": "Wave Expert" },
+      { "id": "lvl-1", "title": "Wave Expert" },
+      { "id": "lvl-2", "title": "Oiled Sigma Circle" },
+      { "id": "lvl-3", "title": "Ring Worm" },
+      { "id": "lvl-4", "title": "Toilet Paper Circles" },
       { "id": "lvl-5", "title": "Sonic Wavenge" },
       { "id": "lvl-6", "title": "Neon Wave" }
     ]
