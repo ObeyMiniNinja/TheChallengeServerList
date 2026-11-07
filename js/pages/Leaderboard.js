@@ -51,7 +51,7 @@ export default {
                         <p v-if="loadingProfile" class="type-caption">Loading profile...</p>
                         <p v-else-if="userProfile">Server points: {{ userProfile.points }}</p>
 
-                        <h2 v-if="legacyCompleted.length > 0">Legacy ({{ legacyCompleted.length }})</h2>
+                        <h2 v-if="legacyCompleted.length > 0">Completed ({{ legacyCompleted.length }})</h2>
                         <table class="table" v-if="legacyCompleted.length > 0">
                             <tr v-for="score in legacyCompleted">
                                 <td class="rank"><p>#{{ score.rank }}</p></td>
@@ -106,7 +106,7 @@ export default {
                             </tr>
                         </table>
 
-                        <h2 v-if="nonLegacyCompleted.length > 0">Completed ({{ nonLegacyCompleted.length }})</h2>
+                        <h2 v-if="nonLegacyCompleted.length > 0">Legacy ({{ nonLegacyCompleted.length }})</h2>
                         <table class="table" v-if="nonLegacyCompleted.length > 0">
                             <tr v-for="score in nonLegacyCompleted">
                                 <td class="rank"><p>#{{ score.rank }}</p></td>
