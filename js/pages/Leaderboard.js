@@ -106,6 +106,17 @@ export default {
                             </table>
                         </div>
 
+                        <h2 v-if="verifiedLegacy.length > 0">Verified Legacy ({{ verifiedLegacy.length }})</h2>
+                        <table class="table" v-if="verifiedLegacy.length > 0">
+                            <tr v-for="score in verifiedLegacy">
+                                <td class="rank"><p>#{{ score.rank }}</p></td>
+                                <td class="level">
+                                    <a class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
+                                </td>
+                                <td class="score"><p>+{{ localize(score.score) }}</p></td>
+                            </tr>
+                        </table>
+
                         <h2 v-if="nonLegacyCompleted.length > 0">Legacy ({{ nonLegacyCompleted.length }})</h2>
                         <table class="table" v-if="nonLegacyCompleted.length > 0">
                             <tr v-for="score in nonLegacyCompleted">
@@ -150,6 +161,9 @@ export default {
         },
         nonLegacyCompleted() {
             return (this.entry.completed || []).filter((score) => score.rank > 150);
+        },
+        verifiedLegacy() {
+            return (this.entry.verified || []).filter((score) => score.rank < 150);
         },
     },
     async mounted() {
