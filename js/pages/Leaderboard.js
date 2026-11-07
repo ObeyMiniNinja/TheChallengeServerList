@@ -146,10 +146,10 @@ export default {
             return this.leaderboard[this.selected] || { verified: [], completed: [], progressed: [], packs: { completed: [], progressed: [] }, packPoints: 0 };
         },
         legacyCompleted() {
-            return (this.entry.completed || []).filter((score) => score.rank <= 151);
+            return (this.entry.completed || []).filter((score) => score.rank <= 150);
         },
         nonLegacyCompleted() {
-            return (this.entry.completed || []).filter((score) => score.rank > 151);
+            return (this.entry.completed || []).filter((score) => score.rank > 150);
         },
     },
     async mounted() {
