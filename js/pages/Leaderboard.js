@@ -51,6 +51,17 @@ export default {
                         <p v-if="loadingProfile" class="type-caption">Loading profile...</p>
                         <p v-else-if="userProfile">Server points: {{ userProfile.points }}</p>
 
+                        <h2 v-if="entry.verified && entry.verified.length > 0">Verified ({{ entry.verified.length}})</h2>
+                        <table class="table" v-if="entry.verified && entry.verified.length > 0">
+                            <tr v-for="score in entry.verified">
+                                <td class="rank"><p>#{{ score.rank }}</p></td>
+                                <td class="level">
+                                    <a class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
+                                </td>
+                                <td class="score"><p>+{{ localize(score.score) }}</p></td>
+                            </tr>
+                        </table>
+
                         <h2 v-if="legacyCompleted.length > 0">Completed ({{ legacyCompleted.length }})</h2>
                         <table class="table" v-if="legacyCompleted.length > 0">
                             <tr v-for="score in legacyCompleted">
@@ -94,17 +105,6 @@ export default {
                                 </tr>
                             </table>
                         </div>
-
-                        <h2 v-if="entry.verified && entry.verified.length > 0">Verified ({{ entry.verified.length}})</h2>
-                        <table class="table" v-if="entry.verified && entry.verified.length > 0">
-                            <tr v-for="score in entry.verified">
-                                <td class="rank"><p>#{{ score.rank }}</p></td>
-                                <td class="level">
-                                    <a class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
-                                </td>
-                                <td class="score"><p>+{{ localize(score.score) }}</p></td>
-                            </tr>
-                        </table>
 
                         <h2 v-if="nonLegacyCompleted.length > 0">Legacy ({{ nonLegacyCompleted.length }})</h2>
                         <table class="table" v-if="nonLegacyCompleted.length > 0">
