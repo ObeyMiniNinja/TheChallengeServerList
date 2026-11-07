@@ -51,6 +51,17 @@ export default {
                         <p v-if="loadingProfile" class="type-caption">Loading profile...</p>
                         <p v-else-if="userProfile">Server points: {{ userProfile.points }}</p>
 
+                        <h2 v-if="legacyCompleted.length > 0">Legacy ({{ legacyCompleted.length }})</h2>
+                        <table class="table" v-if="legacyCompleted.length > 0">
+                            <tr v-for="score in legacyCompleted">
+                                <td class="rank"><p>#{{ score.rank }}</p></td>
+                                <td class="level">
+                                    <a class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
+                                </td>
+                                <td class="score"><p>+{{ localize(score.score) }}</p></td>
+                            </tr>
+                        </table>
+
                         <!-- Packs section moved to the top of the profile -->
                         <h2 v-if="(entry.packs && (entry.packs.completed.length > 0 || entry.packs.progressed.length > 0))">
                             Packs
@@ -95,9 +106,9 @@ export default {
                             </tr>
                         </table>
 
-                        <h2 v-if="entry.completed && entry.completed.length > 0">Completed ({{ entry.completed.length }})</h2>
-                        <table class="table" v-if="entry.completed && entry.completed.length > 0">
-                            <tr v-for="score in entry.completed">
+                        <h2 v-if="nonLegacyCompleted.length > 0">Completed ({{ nonLegacyCompleted.length }})</h2>
+                        <table class="table" v-if="nonLegacyCompleted.length > 0">
+                            <tr v-for="score in nonLegacyCompleted">
                                 <td class="rank"><p>#{{ score.rank }}</p></td>
                                 <td class="level">
                                     <a class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
@@ -133,6 +144,12 @@ export default {
     computed: {
         entry() {
             return this.leaderboard[this.selected] || { verified: [], completed: [], progressed: [], packs: { completed: [], progressed: [] }, packPoints: 0 };
+        },
+        legacyCompleted() {
+            return (this.entry.completed || []).filter((score) => score.rank <= 151);
+        },
+        nonLegacyCompleted() {
+            return (this.entry.completed || []).filter((score) => score.rank > 151);
         },
     },
     async mounted() {
