@@ -51,9 +51,9 @@ export default {
                         <p v-if="loadingProfile" class="type-caption">Loading profile...</p>
                         <p v-else-if="userProfile">Server points: {{ userProfile.points }}</p>
 
-                        <h2 v-if="entry.verified && entry.verified.length > 0">Verified ({{ entry.verified.length}})</h2>
-                        <table class="table" v-if="entry.verified && entry.verified.length > 0">
-                            <tr v-for="score in entry.verified">
+                        <h2 v-if="verifiedCurrent.length > 0">Verified ({{ verifiedCurrent.length }})</h2>
+                        <table class="table" v-if="verifiedCurrent.length > 0">
+                            <tr v-for="score in verifiedCurrent">
                                 <td class="rank"><p>#{{ score.rank }}</p></td>
                                 <td class="level">
                                     <a class="type-label-lg" target="_blank" :href="score.link">{{ score.level }}</a>
@@ -162,8 +162,11 @@ export default {
         nonLegacyCompleted() {
             return (this.entry.completed || []).filter((score) => score.rank > 150);
         },
-        verifiedLegacy() {
+        verifiedCurrent() {
             return (this.entry.verified || []).filter((score) => score.rank < 150);
+        },
+        verifiedLegacy() {
+            return (this.entry.verified || []).filter((score) => score.rank >= 150);
         },
     },
     async mounted() {
