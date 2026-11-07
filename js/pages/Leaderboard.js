@@ -163,10 +163,10 @@ export default {
             return (this.entry.completed || []).filter((score) => score.rank > 150);
         },
         verifiedCurrent() {
-            return (this.entry.verified || []).filter((score) => score.rank < 150);
+            return (this.entry.verified || []).filter((score) => score.rank <= 150);
         },
         verifiedLegacy() {
-            return (this.entry.verified || []).filter((score) => score.rank >= 150);
+            return (this.entry.verified || []).filter((score) => score.rank > 150);
         },
     },
     async mounted() {
