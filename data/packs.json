@@ -199,6 +199,21 @@
       { "id": "lvl-4", "title": "Spider Circles" },
       { "id": "lvl-5", "title": "Just A Dream" },
       { "id": "lvl-6", "title": "Electrick Circles Z" }
+            ]
+                                            },
+        {
+    "id": "Memory-Challenges",
+    "title": "Memory Challenges",
+    "description": "Memory",
+    "pointsReward": 60,
+    "levels": [
+      { "id": "lvl-1", "title": "Black Shiper" },
+      { "id": "lvl-2", "title": "Yang" },
+      { "id": "lvl-3", "title": "Cold Heart" },
+      { "id": "lvl-4", "title": "Gymnastycks 2" },
+      { "id": "lvl-5", "title": "Eugenes Midlife Crisis" },
+      { "id": "lvl-6", "title": "remember dodi" },
+      { "id": "lvl-7", "title": "Washing Machine" }
     ]
   }
 ]
